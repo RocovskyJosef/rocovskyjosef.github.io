@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2a2a2a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+header {
+  background-color: rgba(36, 36, 36, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: #dddddd;
+  text-decoration: none;
+  background-color: #363636;
+  padding: 0.7rem 1.2rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+header nav a:hover {
+  background-color: #4a4a4a;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+header nav .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+header nav .nav-left h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+}
+header nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+main #fastabout {
+  min-height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+main #fastabout h1 {
+  font-size: 14rem;
+  margin-bottom: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+main #fastabout a {
+  color: #dddddd;
+  text-decoration: none;
+  background-color: #363636;
+  padding: 0.9rem 1.4rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 1.8rem;
+}
+main #fastabout a:hover {
+  background-color: #4a4a4a;
+}
+main #what-do-i-do {
+  min-height: 75vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+}
+main #what-do-i-do .left {
+  display: flex;
+  align-items: center;
+}
+main #what-do-i-do .left h1 {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+main #what-do-i-do .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #what-do-i-do .right p {
+  max-width: 800px;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+main #what-do-i-do .right a {
+  color: #363636;
+  text-decoration: none;
+  background-color: #dddddd;
+  padding: 0.9rem 1.4rem;
+  width: 150px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  border-radius: 100%;
+  font-size: 2rem;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+main #what-do-i-do .right a:hover {
+  background-color: #9f9f9f;
+}
+main #projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main #projects h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+main #projects .projects-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 3rem;
+}
+main #projects .projects-container .project {
+  background-color: #363636;
+  padding: 2rem;
+  min-width: 25vw;
+  max-width: 25vw;
+  min-height: 30rem;
+  border-radius: 10px;
+  text-align: center;
+}
+main #projects .projects-container .project h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+main #projects .projects-container .project p {
+  text-align: justify;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+main #projects .projects-container .project img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */
