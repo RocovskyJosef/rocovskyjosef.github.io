@@ -3,8 +3,8 @@
   --color-text: #363636;
   --color-bg-accent: #36363600;
   --size: clamp(6rem, 1rem + 10vmin, 12rem);
-  --gap: calc(var(--size) / 8);
-  --duration: 20s;
+  --gap: calc(var(--size) / 2);
+  --duration: 30s;
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
 }
