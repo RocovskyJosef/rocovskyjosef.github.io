@@ -13,13 +13,14 @@ body {
 }
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   width: 100%;
   background-color: rgba(36, 36, 36, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 header nav {
   max-width: 1200px;
@@ -93,14 +94,32 @@ footer a:hover {
 
 #mobile-menu {
   display: none;
+  width: 100%;
+  background-color: rgba(36, 36, 36, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+#mobile-menu.show {
+  display: block;
 }
 #mobile-menu a {
   color: white;
-  padding: 14px 16px;
-  min-width: 100vw;
+  padding: 1rem 2rem;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.2rem;
   display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+#mobile-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .mobile-menu-icon {
@@ -111,23 +130,52 @@ footer a:hover {
   padding: 0.7rem 1.2rem;
   transition: all 0.3s ease;
   border-radius: 4px;
+  cursor: pointer;
 }
 .mobile-menu-icon:hover {
   background-color: #4a4a4a;
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  header nav {
+    padding: 0.5rem 2rem;
+  }
+  header nav .nav-left h1 {
+    font-size: 2.5rem;
+  }
+}
 @media (max-width: 768px) {
   .pc-visible {
     display: none;
   }
-  #mobile-menu {
-    display: none;
-    gap: 2rem;
-  }
   .mobile-menu-icon {
     display: block;
+    font-size: 1.5rem;
+  }
+  header nav {
+    padding: 0.5rem 1rem;
+  }
+  header nav .nav-left h1 {
     font-size: 2rem;
-    cursor: pointer;
+  }
+  header nav .nav-right {
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  header nav {
+    padding: 0.5rem 0.5rem;
+  }
+  header nav .nav-left h1 {
+    font-size: 1.5rem;
+  }
+  #mobile-menu a {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+  .mobile-menu-icon {
+    padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
