@@ -20,9 +20,9 @@
             </div>
             <div class="nav-right">
                 <ul class="pc-visible">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a onclick="scrollSection('about')">About</a></li>
+                    <li><a onclick="scrollSection('projects')">Projects</a></li>
+                    <li><a onclick="scrollSection('contact')">Contact</a></li>
                 </ul>
 
   
@@ -32,10 +32,10 @@
             </div>              
 
         </nav>
-            <div id="mobile-menu">
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
+            <div id="mobile-menu" onclick="menuOpen()">
+                <a onclick="scrollSection('about')">About</a>
+                <a onclick="scrollSection('projects')">Projects</a>
+                <a onclick="scrollSection('contact')">Contact</a>
             </div>
 
 

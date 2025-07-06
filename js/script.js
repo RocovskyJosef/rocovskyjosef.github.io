@@ -6,3 +6,7 @@ function menuOpen() {
     x.classList.add("show");
   }
 }
+
+function scrollSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
