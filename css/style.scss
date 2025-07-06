@@ -69,3 +69,26 @@ section{
 
 }
 
+footer{
+    background-color: #24242499;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    text-align: center;
+    color: #dddddd;
+
+    p{
+        margin: 0;
+        font-size: 1.2rem;
+    }
+    a{
+        color: #dddddd;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color: #4a4a4a;
+        }
+    }
+}
+

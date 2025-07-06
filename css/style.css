@@ -61,4 +61,25 @@ header nav .nav-right {
 
 section {
   margin-bottom: 2rem;
+}
+
+footer {
+  background-color: rgba(36, 36, 36, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  text-align: center;
+  color: #dddddd;
+}
+footer p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+footer a {
+  color: #dddddd;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+footer a:hover {
+  color: #4a4a4a;
 }/*# sourceMappingURL=style.css.map */
