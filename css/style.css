@@ -9,20 +9,22 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #dddddd;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 header {
-  background-color: rgba(36, 36, 36, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  background-color: rgba(36, 36, 36, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 header nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0.5rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,6 +58,7 @@ header nav .nav-left h1 {
 header nav .nav-right {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 3rem;
 }
 
@@ -82,4 +85,49 @@ footer a {
 }
 footer a:hover {
   color: #4a4a4a;
+}
+
+.mobile-visible {
+  display: none;
+}
+
+#mobile-menu {
+  display: none;
+}
+#mobile-menu a {
+  color: white;
+  padding: 14px 16px;
+  min-width: 100vw;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.mobile-menu-icon {
+  display: none;
+  color: #dddddd;
+  text-decoration: none;
+  background-color: #363636;
+  padding: 0.7rem 1.2rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+.mobile-menu-icon:hover {
+  background-color: #4a4a4a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pc-visible {
+    display: none;
+  }
+  #mobile-menu {
+    display: none;
+    gap: 2rem;
+  }
+  .mobile-menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=style.css.map */

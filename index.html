@@ -7,6 +7,7 @@
     <title>Ročovský Josef</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -16,17 +17,26 @@
         <nav>
             <div class="nav-left">
                 <h1>Ročovský Josef</h1>
-
-
             </div>
             <div class="nav-right">
-                <ul>
+                <ul class="pc-visible">
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+
+  
+                <a href="javascript:void(0);" class="mobile-menu-icon" onclick="menuOpen()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>              
+
         </nav>
+            <div id="mobile-menu">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
 
 
 
@@ -100,29 +110,29 @@
             </div>
             <div>
                 <article class="skills-wrapper">
-            <div class="marquee">
-              <div class="marquee__group">
-                <img src="images/logos/html.png" alt="HTML5" />
-                <img src="images/logos/css.png" alt="CSS3" />
-                <img src="images/logos/sass.png" alt="SCSS" />
-                <img src="images/logos/js.png" alt="JavaScript" />
-                <img src="images/logos/typescript.png" alt="TypeScript" />
-                <img src="images/logos/photoshop.png" alt="Adobe Photoshop" />
-                <img src="images/logos/github.png" alt="GitHub" />
-              </div>
+                    <div class="marquee">
+                        <div class="marquee__group">
+                            <img src="images/logos/html.png" alt="HTML5" />
+                            <img src="images/logos/css.png" alt="CSS3" />
+                            <img src="images/logos/sass.png" alt="SCSS" />
+                            <img src="images/logos/js.png" alt="JavaScript" />
+                            <img src="images/logos/typescript.png" alt="TypeScript" />
+                            <img src="images/logos/photoshop.png" alt="Adobe Photoshop" />
+                            <img src="images/logos/github.png" alt="GitHub" />
+                        </div>
 
-              
-              <div aria-hidden="true" class="marquee__group">
-                <img src="images/logos/html.png" alt="HTML5" />
-                <img src="images/logos/css.png" alt="CSS3" />
-                <img src="images/logos/sass.png" alt="SCSS" />
-                <img src="images/logos/js.png" alt="JavaScript" />
-                <img src="images/logos/typescript.png" alt="TypeScript" />
-                <img src="images/logos/photoshop.png" alt="Adobe Photoshop" />
-                <img src="images/logos/github.png" alt="GitHub" />
-              </div>
-            </div>
-          </article>
+
+                        <div aria-hidden="true" class="marquee__group">
+                            <img src="images/logos/html.png" alt="HTML5" />
+                            <img src="images/logos/css.png" alt="CSS3" />
+                            <img src="images/logos/sass.png" alt="SCSS" />
+                            <img src="images/logos/js.png" alt="JavaScript" />
+                            <img src="images/logos/typescript.png" alt="TypeScript" />
+                            <img src="images/logos/photoshop.png" alt="Adobe Photoshop" />
+                            <img src="images/logos/github.png" alt="GitHub" />
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -130,13 +140,14 @@
             <h1>Contact me</h1>
             <div>
                 <p>Contact me via social media, e-mail or telephone (only on request):</p>
-                
+
 
                 <div class="contact-icons">
                     <a href="https://www.instagram.com/webdesign_rocovsky/" target="_blank" aria-label="Instagram">
                         <img src="images/icons/instagram.png" alt="Instagram" class="contact-icon">
                     </a>
-                    <a href="https://www.linkedin.com/in/josef-ročovský-757417359/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/josef-ročovský-757417359/" target="_blank"
+                        aria-label="LinkedIn">
                         <img src="images/icons/linkedin.png" alt="LinkedIn" class="contact-icon">
                     </a>
                     <a href="mailto:webdesign.rocovsky@gmail.com" aria-label="Email">
@@ -145,15 +156,17 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 
 
 
     <footer>
         <p>&copy; 2025 Ročovský Josef. All rights reserved.</p>
-        <div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
