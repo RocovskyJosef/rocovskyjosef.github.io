@@ -44,7 +44,7 @@ gsap.registerPlugin(ScrollTrigger);
             start: "0% 70%",
             end: "300% 80%",
             toggleActions: "play none reverse none",
-            markers: true,
+            //markers: true,
         },
         y: 100,
         autoAlpha: 0,
