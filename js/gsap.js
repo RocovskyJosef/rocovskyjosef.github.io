@@ -13,14 +13,18 @@ gsap.registerPlugin(SplitText);
 
     let textSplit = SplitText.create(".TextSplit", {
 
-        type: "chars"
+        type: "chars, words",
+        
     
     });
 
     gsap.from(textSplit.chars, {
-        y: 100,
+        yPercent: "random([-30, 30])",
         autoAlpha: 0,
-        stagger: 0.05
+        stagger: {
+            amount: 1,
+            from: "random"
+        }
     });
 
 });
