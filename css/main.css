@@ -75,7 +75,7 @@ main #fastabout a:hover {
   background-color: #4a4a4a;
 }
 main #what-do-i-do {
-  min-height: 75vh;
+  min-height: 90vh;
   display: flex;
   justify-content: space-between;
   padding: 2rem 5rem;

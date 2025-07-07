@@ -3,13 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  overflow-x: hidden;
+  font-size: 16px;
+}
 
 body {
   background-color: #2a2a2a;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #dddddd;
   line-height: 1.6;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
+  > section{
+    scroll-snap-type: x mandatory;
+  }
 }
 
 header {
@@ -72,6 +81,7 @@ header {
 
 section {
   margin-bottom: 2rem;
+  scroll-snap-align: center;
 }
 
 footer {
