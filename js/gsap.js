@@ -13,7 +13,9 @@ gsap.registerPlugin(SplitText);
 
     let textSplit = SplitText.create(".TextSplit", {
 
-        type: "chars, words, lines",
+        type: "chars, lines",
+        autoSplit: true,
+
         
     
     });
