@@ -20,6 +20,13 @@ gsap.registerPlugin(ScrollTrigger);
     });
 
     gsap.from(textSplit.chars, {
+                scrollTrigger: {
+            trigger: "#fastabout",
+            start: "top 70%",
+            end: "center 20%",
+            toggleActions: "play reverse play reverse",
+            //markers: true,
+        },
         yPercent: "random([-30, 30])",
         autoAlpha: 0,
         stagger: {
@@ -40,7 +47,7 @@ gsap.registerPlugin(ScrollTrigger);
 
     gsap.from(whatDoIDoSplitP.words, {
         scrollTrigger: {
-            trigger: "p",
+            trigger: "#what-do-i-do",
             start: "center 70%",
             end: "center 20%",
             toggleActions: "play reverse play reverse",
@@ -60,7 +67,7 @@ gsap.registerPlugin(ScrollTrigger);
 
     gsap.from(whatDoIDoSplitH1.chars, {
         scrollTrigger: {
-            trigger: "#what-do-i-do h1",
+            trigger: "#what-do-i-do",
             start: "center 70%",
             end: "center 20%",
             toggleActions: "play reverse play reverse",
