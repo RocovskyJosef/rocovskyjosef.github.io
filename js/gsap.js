@@ -25,7 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
             start: "top 70%",
             end: "center 20%",
             toggleActions: "play reverse play reverse",
-            markers: true,
+            //markers: true,
         },
         yPercent: "random([-30, 30])",
         autoAlpha: 0,
