@@ -1,6 +1,18 @@
+let currentSplit = null;
+let animating = false; 
+
 function menuOpen() {
+  if (animating) return; 
+
+  animating = true;
+
   const menu = document.querySelector("#mobile-menu");
   const isOpening = !menu.classList.contains("show");
+
+  if (currentSplit) {
+    currentSplit.revert();
+    currentSplit = null;
+  }
 
   if (isOpening) {
     const state = Flip.getState(menu);
@@ -20,57 +32,66 @@ function menuOpen() {
         ),
     });
 
-
-    const split = SplitText.create("#mobile-menu.show a", {
+    currentSplit = SplitText.create("#mobile-menu.show a", {
       type: "chars, lines",
       autoSplit: true,
       mask: "lines",
       smartSplit: true,
     });
 
-    gsap.from(split.chars, {
+    gsap.from(currentSplit.chars, {
       y: 100,
       autoAlpha: 0,
       stagger: { amount: 1 },
+      onComplete: () => {
+        animating = false;
+      }
     });
 
   } else {
-    // Zavírání
-    const split = SplitText.create("#mobile-menu a", {
+    const state = Flip.getState(menu);
+
+    currentSplit = SplitText.create("#mobile-menu a", {
       type: "chars, lines",
       autoSplit: true,
       mask: "lines",
       smartSplit: true,
     });
 
-    gsap.to(split.chars, {
+    gsap.to(currentSplit.chars, {
       y: -100,
       autoAlpha: 0,
       stagger: { amount: 1 },
       duration: 1,
-      onComplete: () => {
-        const state = Flip.getState(menu);
+    });
 
-        menu.classList.remove("show");
+    gsap.delayedCall(1, () => {
+      menu.classList.remove("show");
 
-        Flip.from(state, {
-          duration: 0.6,
-          ease: "power1.inOut",
-          absolute: true,
-          scale: true,
-          onLeave: (elements) =>
-            gsap.to(elements, {
-              opacity: 0,
-              scale: 0,
-              duration: 0.5,
-            }),
-        });
-
-      },
+      Flip.from(state, {
+        duration: 0.6,
+        ease: "power1.inOut",
+        absolute: true,
+        scale: true,
+        onLeave: (elements) =>
+          gsap.to(elements, {
+            opacity: 0,
+            scale: 0,
+            duration: 0.5,
+          }),
+        onComplete: () => {
+          if (currentSplit) {
+            currentSplit.revert();
+            currentSplit = null;
+          }
+          animating = false;
+        }
+      });
     });
   }
 }
 
 function scrollSection(id) {
+  if (animating) return;
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
