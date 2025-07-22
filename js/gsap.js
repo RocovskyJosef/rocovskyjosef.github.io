@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(Flip);
 
     gsap.from("header", {
         y: -100,
