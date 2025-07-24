@@ -270,7 +270,50 @@ gsap.from("#about-image", {
 });
 
 
-    
+    let contactH1 = SplitText.create("#contact h1", {
+        type: "chars, lines",
+        autoSplit: true,
+    });
+
+    gsap.from(contactH1.chars, {
+        scrollTrigger: {
+            trigger: "#contact",
+            start: "center 70%",
+            end: "center 20%",
+            toggleActions: "play reverse play reverse",
+            //markers: true,
+        },
+        yPercent: "random([-30, 30])",
+        autoAlpha: 0,
+        stagger: {
+            amount: 1,
+            from: "random"
+        }
+    });
+
+        let contactP = SplitText.create("#contact p", {
+        type: "words, lines",
+        autoSplit: true,
+        mask: "lines",
+        smartSplit: true,
+
+        
+    });
+
+    gsap.from(contactP.words, {
+        scrollTrigger: {
+            trigger: "#contact",
+            start: "center 70%",
+            end: "center 20%",
+            toggleActions: "play reverse play reverse",
+            //markers: true,
+        },
+        y: 100,
+        autoAlpha: 0,
+        stagger: {
+            amount: 1,
+        },
+    });
 
 
 

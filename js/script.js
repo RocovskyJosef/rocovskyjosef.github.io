@@ -95,3 +95,14 @@ function scrollSection(id) {
   if (animating) return;
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loading-screen");
+
+  loader.classList.add("fade-out");
+
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 500);
+});
+
