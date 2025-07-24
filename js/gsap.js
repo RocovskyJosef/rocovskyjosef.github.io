@@ -82,6 +82,27 @@ gsap.registerPlugin(Flip);
         }
     });
 
+        let projectsplitH1 = SplitText.create("#project-main-heading", {
+        type: "chars, lines",
+        autoSplit: true,
+    });
+
+    gsap.from(projectsplitH1.chars, {
+        scrollTrigger: {
+            trigger: ".project:nth-child(1)",
+            start: "top 70%",
+            end: "top 20%",
+            toggleActions: "play reverse play reverse",
+            //  markers: true,
+        },
+        yPercent: "random([-30, 30])",
+        autoAlpha: 0,
+        stagger: {
+            amount: 1,
+            from: "random"
+        }
+    });
+
     let projectsSplitPn1 = SplitText.create(".project:nth-child(1) p", {
         type: "words, lines",
         autoSplit: true,
