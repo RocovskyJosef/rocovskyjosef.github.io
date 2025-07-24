@@ -218,8 +218,8 @@ gsap.registerPlugin(Flip);
     gsap.from(aboutMeH1.chars, {
         scrollTrigger: {
             trigger: "#about",
-            start: "center 70%",
-            end: "center 20%",
+    start: "35% 70%",
+    end: "35%% 20%",
             toggleActions: "play reverse play reverse",
             //markers: true,
         },
@@ -243,8 +243,8 @@ gsap.registerPlugin(Flip);
     gsap.from(aboutMeP.words, {
         scrollTrigger: {
             trigger: "#about",
-            start: "center 70%",
-            end: "center 20%",
+    start: "35% 70%",
+    end: "35%% 20%",
             toggleActions: "play reverse play reverse",
             //markers: true,
         },
@@ -259,10 +259,10 @@ gsap.registerPlugin(Flip);
 gsap.from("#about-image", {
   scrollTrigger: {
     trigger: "#about",
-    start: "center 70%",
-    end: "center 20%",
+    start: "35% 70%",
+    end: "35%% 20%",
     toggleActions: "play reverse play reverse",
-    // markers: true,
+     //markers: true,
   },
   opacity: 0,
   scale: 0.8,
