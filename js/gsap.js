@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrollTrigger: {
             trigger: "#about",
             start: "35% 70%",
-            end: "35%% 20%",
+            end: "50% 20%",
             toggleActions: "play reverse play reverse",
             //markers: true,
         },
