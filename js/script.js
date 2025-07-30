@@ -93,6 +93,7 @@ function menuOpen() {
 
 function scrollSection(id) {
   if (animating) return;
+
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 

@@ -2,10 +2,11 @@
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    
-gsap.registerPlugin(SplitText);
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(Flip);
+
+    gsap.registerPlugin(SplitText);
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(Flip);
+
 
     gsap.from("header", {
         y: -100,
@@ -21,7 +22,7 @@ gsap.registerPlugin(Flip);
     });
 
     gsap.from(textSplit.chars, {
-                scrollTrigger: {
+        scrollTrigger: {
             trigger: "#fastabout",
             start: "top 70%",
             end: "center 20%",
@@ -43,7 +44,7 @@ gsap.registerPlugin(Flip);
         mask: "lines",
         smartSplit: true,
 
-        
+
     });
 
     gsap.from(whatDoIDoSplitP.words, {
@@ -82,7 +83,7 @@ gsap.registerPlugin(Flip);
         }
     });
 
-        let projectsplitH1 = SplitText.create("#project-main-heading", {
+    let projectsplitH1 = SplitText.create("#project-main-heading", {
         type: "chars, lines",
         autoSplit: true,
     });
@@ -188,7 +189,7 @@ gsap.registerPlugin(Flip);
         }
     });
 
-        let projectsSplitH2n2 = SplitText.create(".project:nth-child(2) h2", {
+    let projectsSplitH2n2 = SplitText.create(".project:nth-child(2) h2", {
         type: "chars, lines",
         autoSplit: true,
         smartSplit: true,
@@ -239,8 +240,8 @@ gsap.registerPlugin(Flip);
     gsap.from(aboutMeH1.chars, {
         scrollTrigger: {
             trigger: "#about",
-    start: "35% 70%",
-    end: "35%% 20%",
+            start: "35% 70%",
+            end: "35%% 20%",
             toggleActions: "play reverse play reverse",
             //markers: true,
         },
@@ -252,20 +253,20 @@ gsap.registerPlugin(Flip);
         }
     });
 
-        let aboutMeP = SplitText.create("#about p", {
+    let aboutMeP = SplitText.create("#about p", {
         type: "words, lines",
         autoSplit: true,
         mask: "lines",
         smartSplit: true,
 
-        
+
     });
 
     gsap.from(aboutMeP.words, {
         scrollTrigger: {
             trigger: "#about",
-    start: "35% 70%",
-    end: "35%% 20%",
+            start: "35% 70%",
+            end: "35%% 20%",
             toggleActions: "play reverse play reverse",
             //markers: true,
         },
@@ -277,18 +278,18 @@ gsap.registerPlugin(Flip);
     });
 
 
-gsap.from("#about-image", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "35% 70%",
-    end: "35%% 20%",
-    toggleActions: "play reverse play reverse",
-     //markers: true,
-  },
-  opacity: 0,
-  scale: 0.8,
-  duration: 1,
-});
+    gsap.from("#about-image", {
+        scrollTrigger: {
+            trigger: "#about",
+            start: "35% 70%",
+            end: "35%% 20%",
+            toggleActions: "play reverse play reverse",
+            //markers: true,
+        },
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+    });
 
 
     let contactH1 = SplitText.create("#contact h1", {
@@ -312,13 +313,13 @@ gsap.from("#about-image", {
         }
     });
 
-        let contactP = SplitText.create("#contact p", {
+    let contactP = SplitText.create("#contact p", {
         type: "words, lines",
         autoSplit: true,
         mask: "lines",
         smartSplit: true,
 
-        
+
     });
 
     gsap.from(contactP.words, {
@@ -334,6 +335,19 @@ gsap.from("#about-image", {
         stagger: {
             amount: 1,
         },
+    });
+
+    gsap.from(".contact-icon", {
+        scrollTrigger: {
+            trigger: "#contact",
+            start: "35% 70%",
+            end: "35%% 20%",
+            toggleActions: "play reverse play reverse",
+            //markers: true,
+        },
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
     });
 
 
