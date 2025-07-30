@@ -8,6 +8,23 @@
   --scroll-end: calc(-100% - var(--gap));
 }
 
+#buttons {
+  display: flex;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: solid 2px gray;
+  border-radius: 100%;
+}
+
 .marquee {
   display: flex;
   overflow: hidden;
